@@ -1209,7 +1209,7 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		}
 		ssssys = ali[math.random(#ali)]
 		if not redis:get("KLISH:ID") then
-		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'• NAME 𖦹   '..Namei..'     \n• USE 𖥳 '..UserNameID..' .\n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..'.\n⌁ Ch ⇨ @xclawx .\n▿▿▿' ,dl_cb,nil)
+		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'• NAME 𖦹   '..Namei..'     \n• USE 𖥳 '..UserNameID..' .\n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..'.\n⌁ Ch ⇨ @Dannyysource .\n▿▿▿' ,dl_cb,nil)
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1224,7 +1224,7 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		end
 	else
 		if not redis:get("KLISH:ID") then
-		sendMsg(msg.chat_id_,msg.id_,'• لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...!\n• NAME 𖦹   '..Namei..'     \n• USE 𖥳 '..UserNameID..' .\n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..' .\n⌁ Ch ⇨@xclawx .\n▿▿▿')
+		sendMsg(msg.chat_id_,msg.id_,'• لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...!\n• NAME 𖦹   '..Namei..'     \n• USE 𖥳 '..UserNameID..' .\n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..' .\n⌁ Ch ⇨ @Dannyysource .\n▿▿▿')
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1251,7 +1251,7 @@ else
 		Text = Text:gsub('User_Points',nko)
 		sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(Text))
 		else
-		sendMsg(msg.chat_id_,msg.id_,'• الايدي بالصوره معطل \n• USE 𖥳 '..UserNameID..' .\n• NAME 𖦹   '..Namei..'     \n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..' .\n⌁ Ch ⇨@xclawx .\n▿▿▿')
+		sendMsg(msg.chat_id_,msg.id_,'• الايدي بالصوره معطل \n• USE 𖥳 '..UserNameID..' .\n• NAME 𖦹   '..Namei..'     \n• MSG 𖦹 '..msgs..' .\n• STA 𖥳 '..msg.TheRank..' .\n• iD 𖦹 '..msg.sender_user_id_..' .\n⌁ Ch ⇨ @Dannyysource .\n▿▿▿')
 		end
 end
 
@@ -4006,7 +4006,7 @@ elseif Text== "اوامر التسليه"  then return sendMsg(msg.chat_id_,msg.
 ‏
   ]] )
   --=====================================
-  elseif Text== "باسل" or Text== "اباظه" or Text=="باسل اباظه" then
+  elseif Text== "سونيك" or Text== "سونيك" or Text=="سونيك " then
 if msg.SudoUser then  
 return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام♕](https://t.me/UU_IV) ")
 elseif msg.Creator then 
