@@ -3942,9 +3942,9 @@ if not Replay then
 
 local nnn = {
 "اسمي ["..Bot_Name.."] .",
-"تدلل .",
+"تسلم .",
 "تفضل .",
-"عيوني لك .",
+"عيوني ليك .",
 }
 
 local Text = msg.text
@@ -3972,7 +3972,7 @@ sendMsg(msg.chat_id_,msg.id_,nnn[math.random(#nnn)])
 elseif Text== "سونيك" or Text== "سوني" then return  sendMsg(msg.chat_id_,msg.id_,"[مطور سورس داني↯](https://t.me/UU_IV)")
 elseif Text== "اغاني" or Text== "الاغاني" then return  sendMsg(msg.chat_id_,msg.id_,"[@YTOOTY_BOT + اسم الاغنية]")
 elseif Text== "رفع غبي"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم رفع الغبي بنجاح↯\n• تمت إضافته إلى قائمه الأغبياء\n☆")
-elseif Text== "تنزيل غبي"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم تنزيل الغبي بنجاح↯\n• تمت الزاله من قائمه الأغبياء\n☆")
+elseif Text== "رفع خنزير"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم رفع العضو لقائمه الخنازير بنجاح بنجاح↯\n• تمت إضافته في قائمه الخنازير\n☆")
 elseif Text== "رفع كلب"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم رفع الكلب بنجاح↯\n• تمت إضافته إلى قائمه الكلاب\n☆")
 elseif Text== "رفع حمار"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم رفع الحمار بنجاح↯\n• تمت إضافته إلى قائمه الحمير\n☆")
 elseif Text== "تنزيل حمار"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم تنزيل الحمار بنجاح↯\n• تمت ازالته من قائمه الحمير\n☆")
