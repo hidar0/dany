@@ -2365,11 +2365,11 @@ end
 
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
 return [[
-࿌𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐀𝐍𝐘࿌
+𓆩 𝚂𝙾𝚄𝚁𝙲𝙴 𝙳𝙰𝙽𝚈 💎 𓆪.
 
-๛𖣌 𝒅𝒆𝒗𐇣  ⇦ [𖡋 𝒔𝒐𝒏𝒊𝒄🝣](t.me/UU_IV)
+𓆩 𝙳𝙴𝚅.𖤐  𓆪 [𓆩 𝚂𝙾𝙽𝙸𝙲 𓆪](t.me/UU_IV)
 
-๛𖣌 𝒄𝒉𐇣 [𖡋 𝒅𝒂𝒏𝒚🝣 .](t.me/DannyySource)
+𓆩 𝙲𝙷 𓆪 [𓆩 𝙳𝙰𝙽𝚈 𓆪](t.me/DannyySource)
 
 ঌঌঌঌঌঌঌঌঌঌ߷
 ]]
