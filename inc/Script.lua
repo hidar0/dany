@@ -1209,7 +1209,7 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		}
 		ssssys = ali[math.random(#ali)]
 		if not redis:get("KLISH:ID") then
-		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'𓍯↝𝒏𝒂𝒎𝒆   '..Namei..'     \n𓍯↝𝒖𝒔𝒆𝒓'..UserNameID..' .\n𓍯↝𝒎𝒔𝒈 '..msgs..' .\n𓍯↝𝒔𝒕𝒂𝒕𝒖� '..msg.TheRank..' .\n𓍯↝𝒊𝒅 '..msg.sender_user_id_..'.\n𓍯↝𝒄𝒉 @Dannyysource .\n▿▿▿' ,dl_cb,nil)
+		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'𖣤 ɴᴀᴍᴇ 𓄹𓄼  '..Namei..'     \n𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 '..UserNameID..' .\n𖥪 ᴍѕɢѕ 𓄹𓄼 '..msgs..' .\n𖥧 ѕᴛᴀᴛѕ 𓄹𓄼 '..msg.TheRank..' .\n𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 '..msg.sender_user_id_..'.\n𖣤 ᴄʜ 𓄹𓄼 @Dannyysource .\n▿▿▿' ,dl_cb,nil)
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1224,7 +1224,7 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		end
 	else
 		if not redis:get("KLISH:ID") then
-		sendMsg(msg.chat_id_,msg.id_,'• لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...!\n𓍯↝𝒏𝒂𝒎𝒆   '..Namei..'     \n𓍯↝𝒖𝒔𝒆𝒓 '..UserNameID..' .\n𓍯↝𝒎𝒔𝒈 '..msgs..' .\n𓍯↝𝒔𝒕𝒂𝒕𝒖� '..msg.TheRank..' .\n𓍯↝𝒊𝒅 '..msg.sender_user_id_..' .\n𓍯↝𝒄𝒉 @Dannyysource .\n▿▿▿')
+		sendMsg(msg.chat_id_,msg.id_,'• لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...!\n𖣤 ɴᴀᴍᴇ 𓄹𓄼  '..Namei..'     \n𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 '..UserNameID..' .\n𖥪 ᴍѕɢѕ 𓄹𓄼 '..msgs..' .\n𖥧 ѕᴛᴀᴛѕ 𓄹𓄼 '..msg.TheRank..' .\n𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 '..msg.sender_user_id_..' .\n𖣤 ᴄʜ 𓄹𓄼 @Dannyysource .\n▿▿▿')
 		else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -1251,7 +1251,7 @@ else
 		Text = Text:gsub('User_Points',nko)
 		sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(Text))
 		else
-		sendMsg(msg.chat_id_,msg.id_,'• الايدي بالصوره معطل \n𓍯↝𝒖𝒔𝒆𝒓 '..UserNameID..' .\n𓍯↝𝒏𝒂𝒎𝒆   '..Namei..'     \n𓍯↝𝒎𝒔𝒈 '..msgs..' .\n𓍯↝𝒔𝒕𝒂𝒕𝒖� '..msg.TheRank..' .\n𓍯↝𝒊𝒅 '..msg.sender_user_id_..' .\n𓍯↝𝒄𝒉 @Dannyysource .\n▿▿▿')
+		sendMsg(msg.chat_id_,msg.id_,'• الايدي بالصوره معطل \n𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 '..UserNameID..' .\n𖣤 ɴᴀᴍᴇ 𓄹𓄼   '..Namei..'     \n𖥪 ᴍѕɢѕ 𓄹𓄼 '..msgs..' .\n𖥧 ѕᴛᴀᴛѕ 𓄹𓄼 '..msg.TheRank..' .\n𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 '..msg.sender_user_id_..' .\n𖣤 ᴄʜ 𓄹𓄼 @Dannyysource .\n▿▿▿')
 		end
 end
 
