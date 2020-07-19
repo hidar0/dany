@@ -2289,7 +2289,6 @@ local text = [[
 ————————————————
 • تفعيـل ◄► ❬لتفعيل البوت ❭
 • تعطيل ◄► ❬لتعطيل البوت ❭
-• اسم بوتك + غادر ◄► ❬لطرد البوت❭
 • رفع منشى ◄► ❬رفع منشى بالبوت❭
 ————————————————
 • اذاعه ◄► ❬لنشر رساله لكل المجموعات❭
@@ -3165,15 +3164,6 @@ return sendMsg(msg.chat_id_,msg.id_,'• **تم اذاعه التوجيه بنج
 end
 
  
-
-if msg.text and msg.type == "channel" then
-if msg.text:match("^"..Bot_Name.." غادر$") and (msg.SudoBase or msg.SudoBase or msg.Director) then
-sendMsg(msg.chat_id_,msg.id_,'!!!')
-rem_data_group(msg.chat_id_)
-StatusLeft(msg.chat_id_,our_id)
-return false
-end
-end
 
 if msg.content_.ID == "MessagePhoto" and redis:get(dany..'welcom_ph:witting'..msg.sender_user_id_) then
 redis:del(dany..'welcom_ph:witting'..msg.sender_user_id_)
