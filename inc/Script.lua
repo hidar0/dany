@@ -2289,7 +2289,6 @@ local text = [[
 ————————————————
 • تفعيـل ◄► ❬لتفعيل البوت ❭
 • تعطيل ◄► ❬لتعطيل البوت ❭
-• اسم بوتك + غادر ◄► ❬لطرد البوت❭
 • رفع منشى ◄► ❬رفع منشى بالبوت❭
 ————————————————
 • اذاعه ◄► ❬لنشر رساله لكل المجموعات❭
@@ -2365,12 +2364,9 @@ end
 
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
 return [[
-࿌𝐒𝐎𝐔𝐑𝐂𝐄 𝐃𝐀𝐍𝐘࿌
-
-๛𖣌 𝒅𝒆𝒗𐇣  ⇦ [𖡋 𝒔𝒐𝒏𝒊𝒄🝣](t.me/UU_IV)
-
-๛𖣌 𝒄𝒉𐇣 [𖡋 𝒅𝒂𝒏𝒚🝣 .](t.me/DannyySource)
-
+𓆩 𝚂𝙾𝚄𝚁𝙲𝙴 𝙳𝙰𝙽𝚈 💎 𓆪.
+𓆩 𝙳𝙴𝚅.𖤐  𓆪 [𓆩 𝚂𝙾𝙽𝙸𝙲 𓆪](t.me/UU_IV)
+𓆩 𝙲𝙷 𓆪 [𓆩 𝙳𝙰𝙽𝚈 𓆪](t.me/DannyySource)
 ঌঌঌঌঌঌঌঌঌঌ߷
 ]]
 end
@@ -3162,17 +3158,6 @@ for i = 1, #groups do
 fwdMsg(groups[i],msg.chat_id_,msg.id_,dl_cb,nil)
 end
 return sendMsg(msg.chat_id_,msg.id_,'• **تم اذاعه التوجيه بنجاح .\n• **للمجموعات » ❴ *'..#groups..'* ❵\n• **للخاص » ❴ '..#pv..' ❵\n')			
-end
-
- 
-
-if msg.text and msg.type == "channel" then
-if msg.text:match("^"..Bot_Name.." غادر$") and (msg.SudoBase or msg.SudoBase or msg.Director) then
-sendMsg(msg.chat_id_,msg.id_,'!!!')
-rem_data_group(msg.chat_id_)
-StatusLeft(msg.chat_id_,our_id)
-return false
-end
 end
 
 if msg.content_.ID == "MessagePhoto" and redis:get(dany..'welcom_ph:witting'..msg.sender_user_id_) then
@@ -4006,7 +3991,7 @@ elseif Text== "اوامر التسليه"  then return sendMsg(msg.chat_id_,msg.
 ‏
   ]] )
   --=====================================
-  elseif Text== "باسل" or Text== "اباظه" or Text=="باسل اباظه" then
+  elseif Text== "سونيكك" or Text== "محمود ابوالمجد" or Text=="مطور السورس" then
 if msg.SudoUser then  
 return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام♕](https://t.me/UU_IV) ")
 elseif msg.Creator then 
