@@ -4052,28 +4052,6 @@ end
 
 
 end
-			
-elseif Text== "سونيكك" or Text== "محمود ابوالمجد" or Text=="مطور السورس" then
-if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام♕](https://t.me/UU_IV) ")
-elseif msg.Creator then 
-return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام♔](https://t.me/UU_IV)")
-elseif msg.Director then 
-return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام๑](https://t.me/UU_IV)")
-elseif msg.Admin then 
-return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام𓈊](https://t.me/UU_IV)")
-else 
-return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام𖦹](https://t.me/UU_IV)")
-end 
-end 
-
-
-
-
-end 
-
-
-end
 
 
 ------------------------------{ End Replay Send }------------------------
