@@ -4031,7 +4031,29 @@ elseif Text:match(Bot_Name.."كيفك") then
 ‏
   ]] )
   --=====================================
-  elseif Text== "سونيكك" or Text== "محمود ابوالمجد" or Text=="مطور السورس" then
+  elseif Text== "انا مين" or Text== "مين انا"  then
+if msg.SudoUser then  
+return sendMsg(msg.chat_id_,msg.id_,"[انت مطوري الغالي ♕](https://t.me/DannyySource) ")
+elseif msg.Creator then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه  تاج راسي♔](https://t.me/DannyySource)")
+elseif msg.Director then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت مدير المجموعه๑](https://t.me/DannyySource)")
+elseif msg.Admin then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت ادمن شد حيلك♘](https://t.me/DannyySource)")
+else 
+return sendMsg(msg.chat_id_,msg.id_,"[مجرد عضو هنا 𖦹](https://t.me/DannyySource)")
+end 
+end 
+
+
+
+
+end 
+
+
+end
+			
+elseif Text== "سونيكك" or Text== "محمود ابوالمجد" or Text=="مطور السورس" then
 if msg.SudoUser then  
 return sendMsg(msg.chat_id_,msg.id_,"[ملك التلجرام♕](https://t.me/UU_IV) ")
 elseif msg.Creator then 
