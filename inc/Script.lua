@@ -4031,7 +4031,7 @@ elseif Text:match(Bot_Name.."كيفك") then
 ‏
   ]] )
   --=====================================
-  elseif Text== "انا مين" or Text== "مين انا"  then
+elseif Text== "انا مين" or Text== "مين انا"  then
 if msg.SudoUser then  
 return sendMsg(msg.chat_id_,msg.id_,"[انت مطوري الغالي ♕](https://t.me/DannyySource) ")
 elseif msg.Creator then 
