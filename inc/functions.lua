@@ -1447,6 +1447,8 @@ elseif  UserID == 1153357069 then
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر مطور السورس\n✇") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المطور\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **  لا يمكنك حظر المنشئ الاساسي\n✶")then 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
@@ -1490,6 +1492,8 @@ return sendMsg(ChatID,MsgID,"- **لا يمكنك كتم مطور السورس\n�
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك كتم المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **  لا يمكنك كتم المنشئ الاساسي\n✶")then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك كتم المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك كتم المدير\n✇") 
@@ -1551,6 +1555,8 @@ return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد مطور السورس\n�
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **  لا يمكنك طرد المنشئ الاساسي\n✶")then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المدير\n✇") 
@@ -1656,6 +1662,8 @@ return sendMsg(ChatID,MsgID,"- **لا يمكنك تقييد مطور السور�
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك تقييد المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- ** لا يمكنك تقييد المنشئ الاساسي\n✶")then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك تقييد المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك تقييد المدير\n✇") 
@@ -1817,6 +1825,8 @@ elseif redis:sismember(dany..':SUDO_BOT:',UserID) then
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المنشئ\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المنشئ\n✶")
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المدير\n✇") 
 elseif redis:sismember(dany..'admins:'..ChatID,UserID) then 
@@ -1897,6 +1907,7 @@ elseif  UserID == 1153357069 then
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر مطور السورس\n✇")
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المطور\n✇") 
+				
 end
 if GeneralBanned(UserID) then 
 return sendMsg(ChatID,MsgID,'- **العضو ⇦ ❪ '..UserName..' ❫\n- **الايدي ⇦ ❪ `'..UserID..'` ❫\n- **تم بالتأكيد حظره عام \n✓️') 
@@ -1927,6 +1938,8 @@ return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد مطور السورس\n�
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✶")then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المدير\n✇") 
@@ -2001,6 +2014,8 @@ elseif  UserID == 1153357069 then
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد مطور السورس\n✇") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المطور\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✶")then 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
@@ -2116,6 +2131,8 @@ elseif  UserID == 1153357069 then
 return sendMsg(ChatID,MsgID,"-**لا يمكنك حظر مطور السورس\n✇") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك حظر المطور\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك حظر المنشئ\n✶")then 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك حظر المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
@@ -2143,6 +2160,8 @@ elseif  UserID == 1153357069 then
 return sendMsg(ChatID,MsgID,"-**لا يمكنك طرد مطور السورس\n✇") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك طرد المطور\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك طرد المنشئ\n✶")then 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك طرد المنشئ\n✇") 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
@@ -2188,6 +2207,8 @@ elseif redis:sismember(dany..':SUDO_BOT:',UserID) then
 return sendMsg(ChatID,MsgID,"-**لا يمكنك كتم المطور\n✇") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك كتم المنشئ\n✇") 
+elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then 
+return sendMsg(ChatID,MsgID,"- **لا يمكنك كتم المنشئ\n✶")then 
 elseif redis:sismember(dany..'owners:'..ChatID,UserID) then 
 return sendMsg(ChatID,MsgID,"-**لا يمكنك كتم المدير\n✇") 
 elseif redis:sismember(dany..'admins:'..ChatID,UserID) then 
