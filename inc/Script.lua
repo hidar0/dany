@@ -4044,7 +4044,18 @@ else
 return sendMsg(msg.chat_id_,msg.id_,"[مجرد عضو هنا 𖦹](https://t.me/DannyySource)")
 end 
 end 
-
+elseif Text== "مين ضافني" or Text== "منو ضافني"  then
+if msg.SudoUser then  
+return sendMsg(msg.chat_id_,msg.id_,"[انت مكانك كل مكان يا مطور♕](https://t.me/DannyySource) ")
+elseif msg.Creator then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه](https://t.me/DannyySource)")
+elseif msg.Director then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/DannyySource)")
+elseif msg.Admin then 
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/DannyySource)")
+else 
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/DannyySource)")
+end
 
 
 
