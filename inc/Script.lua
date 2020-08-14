@@ -3956,7 +3956,6 @@ return
 sendMsg(msg.chat_id_,msg.id_,nnn[math.random(#nnn)]) 
 elseif Text== "سونيك" or Text== "سوني" then return  sendMsg(msg.chat_id_,msg.id_,"[مطور سورس داني↯](https://t.me/UU_IV)")
 elseif Text== "مصنع بوتات"  then return sendMsg(msg.chat_id_,msg.id_,"[اصنع بوتك الخاص من هنا↯](https://t.me/San3bot)")
-elseif Text== "زخرفه"  then return sendMsg(msg.chat_id_,msg.id_,"[زخرف اسمك عربي او إنجليزي من هنا↯](https://t.me/AlbccBot)")
 elseif Text== "اغاني" or Text== "الاغاني" then return  sendMsg(msg.chat_id_,msg.id_,"[@YTOOTY_BOT + اسم الاغنية]")
 elseif Text== "رفع غبي"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم رفع الغبي بنجاح↯\n• تمت إضافته إلى قائمه الأغبياء\n☆")
 elseif Text== "تنزيل غبي"  then return sendMsg(msg.chat_id_,msg.id_,"• أهلاً عزيزي\n• تم تنزيل الغبي بنجاح↯\n• تمت الزاله من قائمه الأغبياء\n☆")
