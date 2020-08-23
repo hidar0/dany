@@ -608,7 +608,7 @@ return false
 end 
 end
 
-if (MsgText[1] == "تنزيل منشى اساسي" or MsgText[1] == "تنزيل منشى اساسي") then
+if (MsgText[1] == "تنزيل منشى اساسي" or MsgText[1] == "تنزيل منشئ اساسي") then
 if not msg.SudoUser then return "• **هذا الامر يخص {المطور,المطور الاساسي} فقط  \n" end
 if not MsgText[2] and msg.reply_id then 
 GetMsgInfo(msg.chat_id_,msg.reply_id,action_by_reply,{msg=msg,cmd="remkara"}) 
@@ -943,7 +943,7 @@ return "• **أهلا عزيزي "..msg.TheRankCmd.."   \n• تم حذف ال�
 end
 
 
-if MsgText[2] == "المنشى الاساسي" then
+if MsgText[2] == "المنشئ الاساسي" then
 if not msg.SudoUser then return "• **هذا الامر يخص {المطور} فقط  \n" end
 local NumMnsha = redis:scard(dany..':Hussain:'..msg.chat_id_)
 if NumMnsha ==0 then 
@@ -1817,7 +1817,7 @@ return false
 end 
 end 
 
-if MsgText[1] == "رتبتي" then return '• ** رتبتك ←  ( '..msg.TheRank..' )\n' end
+if MsgText[1] == "رتبتي" then return '• ** رتبتك هنا 𖣄 ←  ( '..msg.TheRank..' )\n' end
 
 ----------------- استقبال الرسائل ---------------
 if MsgText[1] == "الغاء الامر ✖️" or MsgText[1] == "الغاء" then
