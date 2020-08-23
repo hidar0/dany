@@ -1413,16 +1413,17 @@ return SendMention(ChatID,UserID,MsgID,'- العضو ⇦ ❪ '..USERNAME..' ❫\
 end
 
 if cmd == "iduser" then
-return SendMention(ChatID,UserID,MsgID,"\n\n _ 𝚄𝚂𝙴𝚁 𖣼 "..USERNAME.." \n _ 𝚈𝙾𝚄𝚁 𝙸𝙳 𖢇 "..UserID.." ",37,USERCAR)
+return SendMention(ChatID,UserID,MsgID,"\n\n _ 𝚄𝚂𝙴𝚁 𖣼 "..USERNAME.." \n 
+						_ 𝚈𝙾𝚄𝚁 𝙸𝙳 𖢇 "..UserID.." ",37,USERCAR)
 end
 if cmd == "whois" then
 local namei = data.first_name_..' '..(data.last_name_ or "")
 if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
 return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 '..namei..'\n'
-..'- 𝙸𝙳 𖢇 ⇦ {'..UserID..'} \n'
-..'- 𝚄𝚂𝙴𝚁 𖣼 ⇦ '..useri..'\n'
-..'- 𝚂𝚃𝙰𝚃𝙴 𖡧 '..Getrtba(UserID,ChatID)..'\n'
-..'- نوع الكشف ⇦ بالرد\n↺',13,utf8.len(namei))
+..'- 𝙸𝙳 𖢇  '..UserID..' \n'
+..'- 𝚄𝚂𝙴𝚁 𖣼  '..useri..'\n'
+..'- 𝚂𝚃𝙰𝚃𝙴 𖡧 '..Getrtba(UserID,ChatID)..'
+
 end
 
 if cmd == "active" then
