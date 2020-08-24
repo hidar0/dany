@@ -1428,9 +1428,9 @@ end
 
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
-local namei = FlterName(data.first_name_..' '..(data.last_name_ or ""))
-return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 '..namei..' \n- 𝙼𝚂𝙶𝚂 𖡀 ❪ '..maseegs..' ❫\n- 𝙰𝙲𝚃𝙸𝚅𝙴 𖢩  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
-end
+local namei = FlterName(data.title_)
+return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 ❪ '..namei..' ❫\n-𝙼𝚂𝙶𝚂 𖡀 ❪ '..maseegs..' ❫ \n- 𝙰𝙲𝚃𝙸𝚅𝙴 𖢩  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+end 
 
 if cmd == "ban" then
 if UserID == our_id then   
