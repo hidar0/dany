@@ -1774,19 +1774,20 @@ return sendMsg(ChatID,MsgID,"- ** آضـغط على آلآيدي ليتم آلن
 end
 
 if cmd == "whois" then
-return sendMsg(ChatID,MsgID,
-  'ـ- ** الاسم ⇦ '..FlterName(data.title_,30)..'\n'
-..'- ** الايدي ⇦ {`'..UserID..'`} \n'
-..'- ** المعرف ⇦ '..UserName..'\n'
-..'- ** نوع الكشف ⇦ بالمعرف\n'
-..'↺')
+local namei = data.first_name_..' '..(data.last_name_ or "")
+if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
+return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 '..namei..'\n'
+..'- 𝙸𝙳 𖢇  '..UserID..' \n'
+..'- 𝚄𝚂𝙴𝚁 𖣼  '..useri..'\n'
+..'- 𝚂𝚃𝙰𝚃𝙴 𖡧 '..Getrtba(UserID,ChatID)..'
+
 end
 
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
-local namei = FlterName(data.title_)
-return SendMention(ChatID,UserID,MsgID,'- العضو ⇦ ❪ '..namei..' ❫\n- رسائلك ⇦ ❪ '..maseegs..' ❫ رسالة\n- التفاعل ⇦  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
-end 
+local namei = FlterName(data.first_name_..' '..(data.last_name_ or ""))
+return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 '..namei..' \n- 𝙼𝚂𝙶𝚂 𖡀 ❪ '..maseegs..' ❫\n- 𝙰𝙲𝚃𝙸𝚅𝙴 𖢩  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+end
 
 if cmd == "ban" then
 if UserID == our_id then   
@@ -2053,14 +2054,13 @@ redis:srem(dany..'admins:'..ChatID,UserID)
 return SendMention(ChatID,UserID,MsgID,'-العضو ⇦ ❪ '..USERNAME..' ❫\n-الايدي ⇦ ❪ '..UserID..' ❫\n-تم تنزيله من الادمنيه \n✓️',17,USERCAR) 
 end
 if cmd == "whois" then
-GetChatMember(ChatID,UserID,function(arg,data1)
-local namei = data1.first_name_..' '..(data1.last_name_ or "")
-if data1.username_ then useri = '@'..data1.username_ else useri = " لا يوجد " end
-return SendMention(ChatID,UserID,MsgID,'- الاسم ⇦ '..namei..'\n'
-..'- الايدي ⇦ {'..UserID..'} \n'
-..'- المعرف ⇦ '..useri..'\n'
-..'- الرتبه ⇦ '..Getrtba(UserID,ChatID)..'\n'
-..'- نوع الكشف ⇦ بالايدي\n↺',13,utf8.len(namei))
+local namei = data.first_name_..' '..(data.last_name_ or "")
+if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
+return SendMention(ChatID,UserID,MsgID,'- 𝙽𝙰𝙼𝙴 𖢸 '..namei..'\n'
+..'- 𝙸𝙳 𖢇  '..UserID..' \n'
+..'- 𝚄𝚂𝙴𝚁 𖣼  '..useri..'\n'
+..'- 𝚂𝚃𝙰𝚃𝙴 𖡧 '..Getrtba(UserID,ChatID)..'
+
 end)
 end
 
