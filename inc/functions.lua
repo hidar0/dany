@@ -6,7 +6,6 @@
 #-------------------------------------------------------------------
 ]]
 function dl_cb(a,d) end
- 
 function GetInputFile(file)
 local file = file or "" 
 if file:match('/') then
@@ -1429,7 +1428,7 @@ return SendMention(ChatID,UserID,MsgID,'• العضو » ❪ '..USERNAME..' ❫
 end
 
 if cmd == "iduser" then
-return SendMention(ChatID,UserID,MsgID,"• أضغط على الايدي ليتم النسخ\n\n "..USERNAME.." ~⪼ { "..UserID.." }",37,USERCAR)
+return SendMention(ChatID,UserID,MsgID,"• HOW ARE YOU BRO \n\n𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 "..USERNAME.." 𝚈𝙾𝚄𝚁 𝙸𝙳 𖠗 { "..UserID.." }",37,USERCAR)
 end
 if cmd == "whois" then
 local namei = data.first_name_..' '..(data.last_name_ or "")
@@ -1785,7 +1784,7 @@ return sendMsg(ChatID,MsgID,'• **العضو » ❪ '..UserName..' ❫\n• **�
 end
 
 if cmd == "iduser" then
-return sendMsg(ChatID,MsgID,"• ** أضغط على الايدي ليتم النسخ\n\n "..UserName.." ~⪼ ( `"..UserID.."` )")
+return sendMsg(ChatID,MsgID,"• **HOW ARE YOU BRO \n\n𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 "..UserName.." 𝚈𝙾𝚄𝚁 𝙸𝙳 𖠗 ( `"..UserID.."` )")
 end
 
 if cmd == "whois" then
