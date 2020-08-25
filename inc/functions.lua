@@ -1445,7 +1445,7 @@ end
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
 local namei = FlterName(data.first_name_..' '..(data.last_name_ or ""))
-return SendMention(ChatID,UserID,MsgID,'• العضو » '..namei..' \n• رسائلك » ❪ '..maseegs..' ❫ رسالةة\n• التفاعل »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+return SendMention(ChatID,UserID,MsgID,'• 𝙽𝙰𝙼𝙴 𖢩  '..namei..' \n• 𝙼𝚂𝙶𝚂 𖡼   '..maseegs..' ❫ \n• 𝙰𝙲𝚃𝙸𝚅𝙴 𖢩   ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
 end
 
 if cmd == "ban" then
@@ -1801,7 +1801,7 @@ end
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
 local namei = FlterName(data.title_)
-return SendMention(ChatID,UserID,MsgID,'• العضو » ❪ '..namei..' ❫\n• رسائلك » ❪ '..maseegs..' ❫ رسالةة\n• التفاعل »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+return SendMention(ChatID,UserID,MsgID,'• 𝙽𝙰𝙼𝙴 𖢩 ❪ '..namei..' ❫\n• 𝙼𝚂𝙶𝚂 𖡼 » ❪ '..maseegs..' ❫ \n• 𝙰𝙲𝚃𝙸𝚅𝙴 𖢩  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
 end 
 
 if cmd == "ban" then
