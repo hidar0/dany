@@ -1434,7 +1434,7 @@ end
 if cmd == "whois" then
 local namei = data.first_name_..' '..(data.last_name_ or "")
 if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
-return SendMention(ChatID,UserID,MsgID,'• الاسم » '..namei..'\n'
+return SendMention(ChatID,UserID,MsgID,'• 𝙽𝙰𝙼𝙴 𖢩 '..namei..'\n'
 ..'𝙸𝙳 𖠗 {'..UserID..'} \n'
 ..'𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 '..useri..'\n'
 ..'𝚂𝚃𝙰𝚃𝙴 𖡧  '..Getrtba(UserID,ChatID)..'\n'
@@ -2072,7 +2072,7 @@ if cmd == "whois" then
 GetChatMember(ChatID,UserID,function(arg,data1)
 local namei = data1.first_name_..' '..(data1.last_name_ or "")
 if data1.username_ then useri = '@'..data1.username_ else useri = " لا يوجد " end
-return SendMention(ChatID,UserID,MsgID,'• الاسم » '..namei..'\n'
+return SendMention(ChatID,UserID,MsgID,'𝙽𝙰𝙼𝙴 𖢩 '..namei..'\n'
 ..'𝙸𝙳 𖠗 » {'..UserID..'} \n'
 ..'𝚄𝚂𝙴𝚁𝙽𝙴 𖠰 » '..useri..'\n'
 ..'𝚂𝚃𝙰𝚃𝚂 𖣁 '..Getrtba(UserID,ChatID)..'\n'
