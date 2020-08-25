@@ -1435,10 +1435,10 @@ if cmd == "whois" then
 local namei = data.first_name_..' '..(data.last_name_ or "")
 if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
 return SendMention(ChatID,UserID,MsgID,'• الاسم » '..namei..'\n'
-..'• الايدي » {'..UserID..'} \n'
-..'• المعرف » '..useri..'\n'
-..'• الرتبه » '..Getrtba(UserID,ChatID)..'\n'
-..'• ️ نوع الكشف » بالرد\n➖',13,utf8.len(namei))
+..'𝙸𝙳 𖠗 {'..UserID..'} \n'
+..'𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 '..useri..'\n'
+..'𝚂𝚃𝙰𝚃𝙴 𖡧  '..Getrtba(UserID,ChatID)..'\n'
+..'__________\n➖',13,utf8.len(namei))
 end
 
 if cmd == "active" then
@@ -1451,7 +1451,7 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر المطور الاساسي\n") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر مالك السورس\n") 
 elseif UserID == 1153357069 then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر مطور السورس\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
@@ -1491,7 +1491,7 @@ if cmd == "silent" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم المطور الاساسي\n• ") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم مالك السورس\n• ") 
 elseif UserID == 1153357069 then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم مطور السورس\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
@@ -1586,9 +1586,9 @@ end
 if UserID == our_id then 
 Getrtb = 'ادمن' 
 elseif  UserID == SUDO_ID then
-Getrtb = 'مطور اساسي ' 
+Getrtb = 'مالك السورس ' 
 elseif  UserID == 1153357069 then
-Getrtb =  'مطور السورس'
+Getrtb =  'مطور اساسي'
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then
 Getrtb = 'مطور ' 
 elseif redis:sismember(dany..':KARA_BOT:'..ChatID,UserID) then
@@ -1649,9 +1649,9 @@ if cmd =="tqeed" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد المطور الاساسي\n") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مالك السورس\n") 
 elseif UserID == 1153357069 then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مطور السورس\n") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مطور الاساسي\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد المطور\n") 
 elseif redis:sismember(dany..':MONSHA_BOT:'..ChatID,UserID) then 
@@ -1790,10 +1790,10 @@ end
 
 if cmd == "whois" then
 return sendMsg(ChatID,MsgID,
-  '• ** الاسم » '..FlterName(data.title_,30)..'\n'
-..'• ** الايدي » {`'..UserID..'`} \n'
-..'• ** المعرف » '..UserName..'\n'
-..'• ** نوع الكشف » بالمعرف\n'
+  '• 𝙽𝙰𝙼𝙴 𖢃 '..FlterName(data.title_,30)..'\n'
+..'• 𝙸𝙳 𖢇 {`'..UserID..'`} \n'
+..'• 𝚄𝚂𝙴𝚁 𖣼 '..UserName..'\n'
+..'• _____________\n'
 ..'')
 end
 
@@ -2073,10 +2073,10 @@ GetChatMember(ChatID,UserID,function(arg,data1)
 local namei = data1.first_name_..' '..(data1.last_name_ or "")
 if data1.username_ then useri = '@'..data1.username_ else useri = " لا يوجد " end
 return SendMention(ChatID,UserID,MsgID,'• الاسم » '..namei..'\n'
-..'• الايدي » {'..UserID..'} \n'
-..'• المعرف » '..useri..'\n'
-..'• الرتبه » '..Getrtba(UserID,ChatID)..'\n'
-..'• نوع الكشف » بالايدي\n',13,utf8.len(namei))
+..'𝙸𝙳 𖠗 » {'..UserID..'} \n'
+..'𝚄𝚂𝙴𝚁𝙽𝙴 𖠰 » '..useri..'\n'
+..'𝚂𝚃𝙰𝚃𝚂 𖣁 '..Getrtba(UserID,ChatID)..'\n'
+..'____________\n',13,utf8.len(namei))
 end)
 end
 
