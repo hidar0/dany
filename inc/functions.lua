@@ -1450,7 +1450,7 @@ if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر مالك السورس\n") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر مالك البوت\n") 
 elseif UserID == 1153357069 then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر مطور السورس\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
@@ -1490,7 +1490,7 @@ if cmd == "silent" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم مالك السورس\n• ") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم مالك البوت\n• ") 
 elseif UserID == 1153357069 then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك كتم مطور السورس\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
@@ -1585,7 +1585,7 @@ end
 if UserID == our_id then 
 Getrtb = 'ادمن' 
 elseif  UserID == SUDO_ID then
-Getrtb = 'مالك السورس ' 
+Getrtb = 'مالك البوت ' 
 elseif  UserID == 1153357069 then
 Getrtb =  'مطور اساسي'
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then
@@ -1648,7 +1648,7 @@ if cmd =="tqeed" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد البوت\n") 
 elseif UserID == SUDO_ID then 
-return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مالك السورس\n") 
+return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مالك البوت\n") 
 elseif UserID == 1153357069 then 
 return sendMsg(ChatID,MsgID,"• **لا يمكنك تقييد مطور الاساسي\n") 
 elseif redis:sismember(dany..':SUDO_BOT:',UserID) then 
@@ -1801,7 +1801,7 @@ local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
 local namei = FlterName(data.title_)
 return SendMention(ChatID,UserID,MsgID,'• العضو » '..namei..' \n• رسائلك » ❪ '..maseegs..' ❫ رسالةة\n• التفاعل »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
 end 
-
+_
 if cmd == "ban" then
 if UserID == our_id then   
 return sendMsg(ChatID,MsgID,"• **لا يمكنك حظر البوت\n") 
