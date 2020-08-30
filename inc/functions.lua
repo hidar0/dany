@@ -1433,19 +1433,20 @@ if cmd == "iduser" then
 return SendMention(ChatID,UserID,MsgID,"• HOW ARE YOU BRO \n\n𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 "..USERNAME.." 𝚈𝙾𝚄𝚁 𝙸𝙳 𖠗 { "..UserID.." }",37,USERCAR)
 end
 if cmd == "whois" then
-local namei = data.first_name_..' '..(data.last_name_ or "")
-if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
-return SendMention(ChatID,UserID,MsgID,'• 𝙽𝙰𝙼𝙴 𖢩 '..namei..'\n'
-..'𝙸𝙳 𖠗 {'..UserID..'} \n'
-..'𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 𖢃 '..useri..'\n'
-..'𝚂𝚃𝙰𝚃𝙴 𖡧  '..Getrtba(UserID,ChatID)..'\n'
-..'__________\n➖',13,utf8.len(namei))
+return sendMsg(ChatID,MsgID,
+  '• 𝑵𝑨𝑴𝑬 » '..FlterName(data.title_,30)..'\n'
+..'• 𝑰𝑫 » {`'..UserID..'`} \n'
+..' • 𝑼𝑺𝑬 »  '..UserName..'\n'
+..'• 𝑺𝑻𝑨 » '..Getrtba(UserID,ChatID)..'\n'
+..'\n'
+..' ')
 end
+
 
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
 local namei = FlterName(data.first_name_..' '..(data.last_name_ or ""))
-return SendMention(ChatID,UserID,MsgID,'• العضو » '..namei..' \n• رسائلك » ❪ '..maseegs..' ❫ رسالةة\n• التفاعل »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+return SendMention(ChatID,UserID,MsgID,'• 𝑼𝑺𝑬 » '..namei..' \n • 𝑴𝑺𝑮 » ❪ '..maseegs..' ❫ \n• 𝑨𝑪𝑻𝑰𝑽𝑬 »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
 end
 
 if cmd == "ban" then
@@ -1791,18 +1792,19 @@ end
 
 if cmd == "whois" then
 return sendMsg(ChatID,MsgID,
-  '• 𝙽𝙰𝙼𝙴 𖢃 '..FlterName(data.title_,30)..'\n'
-..'• 𝙸𝙳 𖢇 {`'..UserID..'`} \n'
-..'• 𝚄𝚂𝙴𝚁 𖣼 '..UserName..'\n'
-..'• _____________\n'
-..'')
+  '• 𝑵𝑨𝑴𝑬 » '..FlterName(data.title_,30)..'\n'
+..'• 𝑰𝑫 » {`'..UserID..'`} \n'
+..' • 𝑼𝑺𝑬 »  '..UserName..'\n'
+..'• 𝑺𝑻𝑨 » '..Getrtba(UserID,ChatID)..'\n'
+..'\n'
+..' ')
 end
 
 
 if cmd == "active" then
 local maseegs = redis:get(dany..'msgs:'..UserID..':'..ChatID) or 1
 local namei = FlterName(data.title_)
-return SendMention(ChatID,UserID,MsgID,'• العضو » ❪ '..namei..' ❫\n• رسائلك » ❪ '..maseegs..' ❫ رسالةة\n• التفاعل »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
+return SendMention(ChatID,UserID,MsgID,'• 𝑼𝑺𝑬 » ❪ '..namei..' ❫\n • 𝑴𝑺𝑮 » ❪ '..maseegs..' ❫ \n• 𝑨𝑪𝑻𝑰𝑽𝑬 »  ❪ '..Get_Ttl(maseegs)..' ❫\n',12,utf8.len(namei)) 
 end 
 
 if cmd == "ban" then
@@ -2070,17 +2072,19 @@ end
 redis:srem(dany..'admins:'..ChatID,UserID)
 return SendMention(ChatID,UserID,MsgID,'• العضو » ❪ '..USERNAME..' ❫\n• الايدي » ❪ '..UserID..' ❫\n• تم تنزيله من الادمنيه \n',17,USERCAR) 
 end
+
 if cmd == "whois" then
 GetChatMember(ChatID,UserID,function(arg,data1)
-local namei = data1.first_name_..' '..(data1.last_name_ or "")
-if data1.username_ then useri = '@'..data1.username_ else useri = " لا يوجد " end
-return SendMention(ChatID,UserID,MsgID,'𝙽𝙰𝙼𝙴 𖢩 '..namei..'\n'
-..'𝙸𝙳 𖠗 » {'..UserID..'} \n'
-..'𝚄𝚂𝙴𝚁𝙽𝙴 𖠰 » '..useri..'\n'
-..'𝚂𝚃𝙰𝚃𝚂 𖣁 '..Getrtba(UserID,ChatID)..'\n'
-..'____________\n',13,utf8.len(namei))
+local namei = data.first_name_..' '..(data.last_name_ or "")
+if data.username_ then useri = '@'..data.username_ else useri = " لا يوجد " end
+return SendMention(ChatID,UserID,MsgID,'• 𝑵𝑨𝑴𝑬 » '..namei..'\n'
+..' • 𝑰𝑫 » {'..UserID..'} \n'
+..'• 𝑼𝑺𝑬 » '..useri..'\n'
+..'• 𝑺𝑻𝑨 » '..Getrtba(UserID,ChatID)..'\n'
+..'\n',13,utf8.len(namei))
 end)
 end
+
 
 if cmd == "up_sudo" then
 if redis:sismember(dany..':SUDO_BOT:',UserID) then 
