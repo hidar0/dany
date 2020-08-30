@@ -1913,8 +1913,13 @@ if not msg.SudoBase then return"• **هذا الامر يخص {المطور ا�
 return "• البوت شـغــال ." 
 end
 
-if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n• اهلاً عزيزي المطور ايديك :\n\n• "..msg.sender_user_id_.."\n"  end
-
+elseif Text== "ايديي" or Text=="ايدي 🆔" then 
+  GetUserID(msg.sender_user_id_,function(arg,data)
+  if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
+  local USERCAR = utf8.len(USERNAME)
+  SendMention(msg.chat_id_,data.id_,msg.id_," \n • 𝑼𝑺𝑬 » "..USERNAME.." \n• 𝑵𝑨𝑴𝑬 »  ( "..data.id_.." )",37,USERCAR)  
+  return false
+  end)
 if MsgText[1]== "قناة السورس" and msg.type == "pv" then
 local inline = {{{text="-قنآهہ‏‏ آلسـورس اضـغـط هـنـآ ",url="https://t.me/DannyySource"}}}
 send_key(msg.sender_user_id_,'   [قناة سورس : دانـي](https://t.me/DannyySource)' ,nil,inline,msg.id_)
