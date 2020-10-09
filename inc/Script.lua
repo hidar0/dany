@@ -4021,33 +4021,32 @@ elseif Text:match(Bot_Name.."كيفك") then
   elseif Text== "كسمك"  then return sendMsg(msg.chat_id_,msg.id_,"عيب.")
   elseif Text== "مخنوق"  then  return sendMsg(msg.chat_id_,msg.id_,"اقرء قرأن."  )
   elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"اهلاً عزيزي .")
-  elseif Text== "ارض زيكولا"  then return sendMsg(msg.chat_id_,msg.id_,"[ارض زيكولا  𖡼](https://t.me/UU_NOVEL/3.")
-  elseif Text== "مقبره الحيوانات."  then return sendMsg(msg.chat_id_,msg.id_," [مقبره الحيوانات 𖡼](https://t.me/UU_NOVEL/8)")
-  elseif Text== "التحرر"  then return sendMsg(msg.chat_id_,msg.id_,"[التحرر  𖡼](https://t.me/UU_NOVEL/9)")
-  elseif Text== "روايه المخلوق"  then return sendMsg(msg.chat_id_,msg.id_,"[روايه المخلوق  𖡼](https://t.me/UU_NOVEL/5)")
-  elseif Text== "في حضره الجن"  then return sendMsg(msg.chat_id_,msg.id_,"[في حضره الجن  𖡼](https://t.me/UU_NOVEL/6).")
-  elseif Text== "موسوعه الظلام"  then  return sendMsg(msg.chat_id_,msg.id_,"[موسوعه الظلام  𖡼](https://t.me/UU_NOVEL/4)."  )
-  elseif Text== "لقاء مع كاتب الرعب"  then return sendMsg(msg.chat_id_,msg.id_,"[لقاء مع كاتب الرعب  𖡼](https://t.me/UU_NOVEL/7) .")
+elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+    elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"بموت فيك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"انت نبضي")
   elseif Text== "سلام" or Text== "السلامم عليكم" or Text== "سلام عليكم" or Text=="سلامنن عليكم" or Text=="السلامن عليكم" then 
   return sendMsg(msg.chat_id_,msg.id_,"وعلـيك السلام يقلبي " )
   elseif Text== "هيه"  then return sendMsg(msg.chat_id_,msg.id_,"وبعدين" )
-    elseif Text== "ما تخبئه لنا النجوم"  then return sendMsg(msg.chat_id_,msg.id_,"[ما تخبئه لنا النجوم  𖡼](https://t.me/UU_NOVEL/18).")
-  elseif Text== "بعد النسيان."  then return sendMsg(msg.chat_id_,msg.id_," [بعد النسيان  𖡼](https://t.me/UU_NOVEL/19)  ")
-  elseif Text== "يوميات كئيب"  then return sendMsg(msg.chat_id_,msg.id_,"[يوميات كئيب  𖡼](https://t.me/UU_NOVEL/20)")
-  elseif Text== "الشفق"  then return sendMsg(msg.chat_id_,msg.id_,"[روايه الشفق الجزء الاول  𖡼](https://t.me/UU_NOVEL/21)")
-  elseif Text== "كبرياء وتحمل"  then return sendMsg(msg.chat_id_,msg.id_,"[كبرياء وتحمل  𖡼](https://t.me/UU_NOVEL/22).")
-  elseif Text== "الامير السعيد"  then  return sendMsg(msg.chat_id_,msg.id_,"[الامير السعيد  𖡼](https://t.me/UU_NOVEL/23)."  )
-  elseif Text== "الانسان الاخير"  then return sendMsg(msg.chat_id_,msg.id_,"[الانسان الاخير  𖡼](https://t.me/UU_NOVEL/24) .")
-  elseif Text== "واقف" then return sendMsg(msg.chat_id_,msg.id_,"لا قاعد هخه")
+    elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+    elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"بموت فيك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"انت نبضي")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"بهواك")
+  elseif Text== "عرص"  then return sendMsg(msg.chat_id_,msg.id_,"انت العرص")
   elseif Text== "متضايق"  then return sendMsg(msg.chat_id_,msg.id_,"سلامتـك")
   elseif Text== "متضايقه"  then return sendMsg(msg.chat_id_,msg.id_,"سـلامتك")
   elseif Text== "هلو" or Text== "هاي." or Text== "هاي" then return sendMsg(msg.chat_id_,msg.id_,"احلي مسا ، افخم هـاي .")
-  elseif Text== "واختفي كل شئ"  then return sendMsg(msg.chat_id_,msg.id_,"[واختفي كل شئ  𖡼](https://t.me/UU_NOVEL/37)")
-  elseif Text== "جثه في الخندق"  then return sendMsg(msg.chat_id_,msg.id_," [جثة في الخندق  𖡼](https://t.me/UU_NOVEL/37) ")
-  elseif Text== "اللوح الازرق"  then return sendMsg(msg.chat_id_,msg.id_,"[اللوح الازرق  𖡼](https://t.me/UU_NOVEL/35)")
-  elseif Text== "نيلوفر الاسود"  then return sendMsg(msg.chat_id_,msg.id_,"[نيلوفر الاسود  𖡼](https://t.me/UU_NOVEL/34)")
-  elseif Text== "في القطار السعيد"  then return sendMsg(msg.chat_id_,msg.id_,"[في القطار السريع  𖡼](https://t.me/UU_NOVEL/33).")
-  elseif Text== "الرمز المفقود"  then  return sendMsg(msg.chat_id_,msg.id_,"[الرمز المفقود  𖡼](https://t.me/UU_NOVEL/32)."  )
+  elseif Text== "لبوه"  then return sendMsg(msg.chat_id_,msg.id_,"انت اللبوه")
+  elseif Text== "متناك"  then return sendMsg(msg.chat_id_,msg.id_," انت المتناك")
+  elseif Text== "زبي"  then return sendMsg(msg.chat_id_,msg.id_,"انت عندك؟")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
+  elseif Text== "بحبك"  then return sendMsg(msg.chat_id_,msg.id_,"اعشقك")
  elseif Text== "مساعدة"  then return sendMsg(msg.chat_id_,msg.id_,"لعرض قائمة المساعدة اكتب الاوامر 🌚❤️")
   elseif Text== "خول"  then return sendMsg(msg.chat_id_,msg.id_,"شبهك.")
   elseif Text== "حلو"  then return sendMsg(msg.chat_id_,msg.id_,"مش احلي منك")
@@ -4483,33 +4482,9 @@ if not redis:get('kar') then
   "^(اطردني)$", 
   "^(جهاتي)$", 
   
-  
-  
-  
-  
-    "^(الروايات)$",
-  "^(روايات)$",
-  "^(غموض)$", 
-  "^(الغموض)$",
-  "^(رومانسي)$",
-  "^(رومانسيه)$",
-  "^(رعب)$",
-"^(الرعب)$",
-  
-  
-  
   "^(السورس)$",
   "^(سورس)$",
-  "^(م المطور)$", 
-  "^(اوامر الرد)$",
-  "^(الاوامر)$",
-  "^(م1)$",
-  "^(م2)$",
-  "^(م3)$",
-  "^(م4)$",
-  "^(م5)$",
-  "^(م6)$",
-  "^(م7)$",
+
    
    
    },
