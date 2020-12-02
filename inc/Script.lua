@@ -2745,6 +2745,7 @@ if msg.SudoBase then
 local text = 'لوحه اوامرك يا مطوري '
 local keyboard = {
  {"معلومات الكيبورد"},
+  {"اضف سؤال كت تويت"},
 {"ضع اسم للبوت","ضع صوره للترحيب"},
  {"تعطيل التواصل","تفعيل التواصل"},
 {"تعطيل البوت خدمي","تفعيل البوت خدمي","المطورين"},
@@ -3207,6 +3208,48 @@ end
 end
 
 end
+
+
+
+
+if text == "اضف سؤال كت تويت" and SudoBot(msg) then
+database:set(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
+return send(msg.chat_id_, msg.id_,"ارسل السؤال الان ")
+end
+if text == "حذف سؤال كت تويت" and SudoBot(msg) then
+database:del(bot_id.."Storm:gamebot:List:Manager"..msg.chat_id_.."")
+return send(msg.chat_id_, msg.id_,"تم حذف الاسئله")
+end
+if text and text:match("^(.*)$") then
+if database:get(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+send(msg.chat_id_, msg.id_, '\nتم حفظ السؤال بنجاح')
+database:set(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true1uu")
+database:sadd(bot_id.."Storm:gamebot:List:Manager"..msg.chat_id_.."", text)
+return false end
+end
+
+if text == "اضف سؤال كت تويت" and SudoBot(msg) then
+database:set(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
+return send(msg.chat_id_, msg.id_,"ارسل السؤال الان ")
+end
+if text == "حذف سؤال كت تويت" and SudoBot(msg) then
+database:del(bot_id.."Storm:gamebot:List:Manager")
+return send(msg.chat_id_, msg.id_,"تم حذف الاسئله")
+end
+if text and text:match("^(.*)$") then
+if database:get(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+send(msg.chat_id_, msg.id_, '\nتم حفظ السؤال بنجاح')
+database:set(bot_id.."Storm:gamebot:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true1uu")
+database:sadd(bot_id.."Storm:gamebot:List:Manager", text)
+return false end
+end
+if text == 'كت تويت' then
+if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+local list = database:smembers(bot_id.."Storm:gamebot:List:Manager")
+if #list ~= 0 then
+send(msg.chat_id_, msg.id_,quschen)
+end
+
 
 if msg.pinned then
 print(" -- pinned -- ")
@@ -4422,7 +4465,7 @@ if not redis:get('kar') then
   "^(اطردني)$", 
   "^(جهاتي)$", 
   
-  
+    "^(اضف سؤال كت تويت)$",
   
   
   
