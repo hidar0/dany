@@ -1,5 +1,10 @@
 --[[
-
+▇▇▇                                       ▇▇▇               
+▇▇        ▇                        ▇       ▇▇             
+▇▇          ▇ @UU_IV   ▇         ▇▇            
+▇▇             ▇             ▇             ▇▇        Dev : Mahmoud aboelmagd
+▇▇                ▇       ▇                ▇▇      
+▇▇                   ▇▇                    ▇▇     Source revor BY @UU_IV
 ]]
 
 function download_to_file(url, file_name)
@@ -1844,7 +1849,7 @@ end
 
 if (MsgText[1] ==  'تحديث السورس'  or MsgText[1] ==  'تحديث السورس 🔂' ) then
 if not msg.SudoBase then return "*│*هذا الامر يخص {المطور الاساسي} فقط  \n" end
-local GetVerison = https.request( 'https://raw.githubusercontent.com/basselabaza/danyfile/master/GetVersion.txt' ) or 0
+local GetVerison = https.request( 'https://raw.githubusercontent.com/devsonicx/danyfile/master/GetVersion.txt' ) or 0
 print(GetVerison.." > "..version)
 if GetVerison > version then
 UpdateSourceStart = true
@@ -2339,13 +2344,10 @@ end
 
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
 return [[
-⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧  
-✾┆𝙎𝙤𝙪𝙧𝙘𝙚 𝐃𝐀𝐍𝐘
-
-✾┆ [Dev .](t.me/UU_IV) 
-✾┆ [Cha .](t.me/UU_DANY) 
-✾┆ [Support .](t.me/Twselsonicbot)
-⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
+⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆
+ [- The Source Developer ](https://t.me/UU_IV) 💌 .
+ [- The Bot channel](https://t.me/UU_FUCK) 💌 .
+⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆
 ]]
 end
 
